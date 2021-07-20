@@ -1,0 +1,46 @@
+@import "_variabels.scss";
+
+.big-preview {
+  width: 100%;
+  height: auto;
+  margin-top: .5rem;
+  padding: 2.1rem .1rem;
+  display: flex;
+  justify-content: space-between;
+  overflow: scroll;
+  scrollbar-width: none;
+  margin-bottom: 1rem;
+  
+  .big-card {
+    min-width: 60%;
+    min-height: 400px;
+    margin: .5rem .8rem;
+    background-size: cover;
+    border-radius: 18px;
+    font-size: .8rem;
+    color: white;
+    text-align: center;
+    padding: 1rem 2.2rem;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 3px 3px 8px #BABCCD;
+    position: relative;
+    transition: .3s ease-in-out;
+    
+    &:first-child {
+      margin-left: 2.3rem!important;
+    }
+    .caption {
+      margin-bottom: 1rem;
+      width: 100%;
+      backdrop-filter: brightnes(.5) blur(2px);
+      
+      p {
+        color: #F7ECEC;
+      }
+    }
+  }
+}
+.big-zoom {
+  transform: scale(1.08);
+}

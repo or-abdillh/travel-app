@@ -1,0 +1,16 @@
+//import variabels
+@import '_variabels.scss';
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  background: $bg-primary;
+  font-weight: 500;
+  
+  &::after, &::after {
+    box-sizing: border-box;
+    display: block;
+  }
+}

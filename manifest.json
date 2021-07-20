@@ -1,0 +1,10 @@
+{
+  "name": "Travel App",
+  "short_name": "Travel App",
+  "theme_color": "#f7f7f7",
+  "background_color": "#fff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/index.html"
+}

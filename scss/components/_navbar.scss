@@ -1,0 +1,30 @@
+@import "_variabels.scss";
+
+.navbar {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  background: $bg-primary;
+  padding: .5rem 1.5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  
+  .nav-box {
+    color: $font-secondary;
+    width: 50px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    padding: .7rem .2rem;
+    border-radius: 12px;
+    transition: .3s;
+  }
+  .active {
+    background: $bg-active;
+    color: white;
+    box-shadow: 3px 3px 8px #BABCCD;
+  }
+}

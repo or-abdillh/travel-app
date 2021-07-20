@@ -1,0 +1,234 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  background: #F7F7F7;
+  font-weight: 500;
+}
+body::after, body::after {
+  box-sizing: border-box;
+  display: block;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav {
+  width: auto;
+  height: 100%;
+}
+.header .nav-button span {
+  height: 5px;
+  background: #161618;
+  display: block;
+  border-radius: 12px;
+}
+.header .nav-button span:first-child {
+  width: 35px;
+}
+.header .nav-button span:last-child {
+  width: 25px;
+  margin-top: 0.25rem;
+}
+.header .nav-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.header .nav-profile .img-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: #C7C6C4;
+  margin-left: 1rem;
+  display: grid;
+  place-items: center;
+  color: #F7F7F7;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+  padding-bottom: 4rem;
+}
+
+.search-bar {
+  width: 100%;
+  height: 50px;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  color: #8F90A1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-bar input {
+  width: 80%;
+  height: 100%;
+  border: none;
+  padding: 0 1.5rem;
+}
+.search-bar input:focus {
+  outline: none;
+}
+.search-bar .search-icon {
+  display: block;
+  border: 2px solid #8F90A1;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 1.5rem;
+  transform: translateY(-4px);
+}
+.search-bar .search-icon::after {
+  display: block;
+  content: "";
+  width: 2px;
+  border-radius: 1px;
+  height: 8px;
+  background: #8F90A1;
+  position: absolute;
+  bottom: -7px;
+  right: -2px;
+  transform: rotate(-35deg);
+}
+
+.small-preview {
+  width: 100%;
+  height: auto;
+  padding: 1.3rem 0;
+  margin-top: 1rem;
+  overflow-x: scroll;
+  overflow-y: auto;
+  scrollbar-width: none;
+  display: flex;
+  justify-content: space-between;
+}
+.small-preview .small-card {
+  min-width: 30%;
+  margin-right: 1rem;
+  background: white;
+  padding-top: 0.3rem;
+  border-radius: 12px;
+  box-shadow: 1px 1px 5px #BABCCD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+}
+.small-preview .small-card p {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.small-preview .small-card img {
+  width: 90%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.zoom {
+  transform: scale(1.25);
+}
+
+.big-preview {
+  width: 100%;
+  height: auto;
+  margin-top: 0.5rem;
+  padding: 2.1rem 0.1rem;
+  display: flex;
+  justify-content: space-between;
+  overflow: scroll;
+  scrollbar-width: none;
+  margin-bottom: 1rem;
+}
+.big-preview .big-card {
+  min-width: 60%;
+  min-height: 400px;
+  margin: 0.5rem 0.8rem;
+  background-size: cover;
+  border-radius: 18px;
+  font-size: 0.8rem;
+  color: white;
+  text-align: center;
+  padding: 1rem 2.2rem;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 3px 3px 8px #BABCCD;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.big-preview .big-card:first-child {
+  margin-left: 2.3rem !important;
+}
+.big-preview .big-card .caption {
+  margin-bottom: 1rem;
+  width: 100%;
+  backdrop-filter: brightnes(0.5) blur(2px);
+}
+.big-preview .big-card .caption p {
+  color: #F7ECEC;
+}
+
+.big-zoom {
+  transform: scale(1.08);
+}
+
+.big-card .button {
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 0.65rem 1.5rem;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #FDA719, #E99408 55%);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  box-shadow: 0.5px 0.5px 2px #FDA719;
+  filter: contrast(1.2);
+  transition: 0.3s;
+}
+.big-card .button:active {
+  filter: contrast(0.5);
+}
+
+.navbar {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  background: #F7F7F7;
+  padding: 0.5rem 1.5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+.navbar .nav-box {
+  color: #8F90A1;
+  width: 50px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  padding: 0.7rem 0.2rem;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.navbar .active {
+  background: #161618;
+  color: white;
+  box-shadow: 3px 3px 8px #BABCCD;
+}
+
+/*# sourceMappingURL=style.css.map */
